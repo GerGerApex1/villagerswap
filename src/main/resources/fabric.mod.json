@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "villagerswap",
+  "version": "${version}",
+  "name": "villagerswap",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/villagerswap/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "me.gergerapex1.villagerswap.client.VillagerswapClient"
+    ],
+    "main": [
+      "me.gergerapex1.villagerswap.Villagerswap"
+    ]
+  },
+  "mixins": [
+    "villagerswap.mixins.json",
+    {
+      "config": "villagerswap.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
